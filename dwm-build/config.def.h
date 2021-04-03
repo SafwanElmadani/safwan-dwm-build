@@ -16,13 +16,14 @@ static       int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:antialias=true:autohint=true",
+										"fontawesome:size=12",
 										"JoyPixels:size=10:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=12";
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+static const char col_gray1[]       = "#242424"; //"#222222"; //background color
+static const char col_gray2[]       = "#444444"; //inactive window border color
+static const char col_gray3[]       = "#FFFFFF"; //"#bbbbbb"; // font color
+static const char col_gray4[]       = "#FFFFFF"; //"#eeeeee"; // current tag and current window font color
+static const char col_cyan[]        = "#994433"; //"#005577"; // top bar second color(blue) and active window color
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -204,4 +205,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
