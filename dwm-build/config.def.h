@@ -122,20 +122,20 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
-	{ MODKEY,		                XK_u,      incrgaps,       {.i = +1 } },
-	{ MODKEY|ShiftMask, 		    XK_u,      incrgaps,       {.i = -1 } },
-	{ MODKEY, 		                XK_i,      incrigaps,      {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_i,      incrigaps,      {.i = -1 } },
-	{ MODKEY,                       XK_o,      incrogaps,      {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_o,      incrogaps,      {.i = -1 } },
-	{ MODKEY,                       XK_6,      incrihgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_6,      incrihgaps,     {.i = -1 } },
-	{ MODKEY,                       XK_7,      incrivgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_7,      incrivgaps,     {.i = -1 } },
-	{ MODKEY,                       XK_8,      incrohgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_8,      incrohgaps,     {.i = -1 } },
-	{ MODKEY,                       XK_9,      incrovgaps,     {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_9,      incrovgaps,     {.i = -1 } },
+	{ MODKEY,		                XK_u,      incrgaps,       {.i = +2 } },
+	{ MODKEY|ShiftMask, 		    XK_u,      incrgaps,       {.i = -2 } },
+	// { MODKEY, 		                XK_i,      incrigaps,      {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_i,      incrigaps,      {.i = -1 } },
+	// { MODKEY,                       XK_o,      incrogaps,      {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_o,      incrogaps,      {.i = -1 } },
+	// { MODKEY,                       XK_6,      incrihgaps,     {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_6,      incrihgaps,     {.i = -1 } },
+	// { MODKEY,                       XK_7,      incrivgaps,     {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_7,      incrivgaps,     {.i = -1 } },
+	// { MODKEY,                       XK_8,      incrohgaps,     {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_8,      incrohgaps,     {.i = -1 } },
+	// { MODKEY,                       XK_9,      incrovgaps,     {.i = +1 } },
+	// { MODKEY|ShiftMask,             XK_9,      incrovgaps,     {.i = -1 } },
 	{ MODKEY,                       XK_0,      togglegaps,     {0} },
 	{ MODKEY|ShiftMask,             XK_0,      defaultgaps,    {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
@@ -194,14 +194,15 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} }, // click layout symbol
+	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },                // click window title zoom mean make master
+	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },    // this is the status bar ram date cpu
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button1,        resizemouse,    {0} },
+	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },   // the actual window
+	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },  // tags buttons 
 	{ ClkTagBar,            0,              Button1,        view,           {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
