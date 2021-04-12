@@ -44,7 +44,7 @@ static Sp scratchpads[] = {
 	{"keepassxc",   spcmd3},
 };
 
-static const char *rofi_menu[]  = { "/home/safwan/.config/scripts/rofimenu.sh", NULL };
+static const char *rofi_menu[]  = { "/home/safwan/.config/scripts/rofimenu", NULL };
 static const char *thunar[]  = {"thunar", NULL };
 
 /* tagging */
@@ -152,6 +152,7 @@ static Key keys[] = {
 	{ MODKEY,						XK_f,		setlayout,		{.v = &layouts[13]} }, /* all float */
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	{ MODKEY,                       XK_s,      togglesticky,   {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
@@ -195,7 +196,9 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} }, // click layout symbol
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },                // click window title zoom mean make master
+	// { ClkWinTitle,          0,              Button2,        zoom,           {0} },                // click window title zoom mean make master
+    { ClkWinTitle,          0,              Button1,        focusstack,     {.i = +1 } },
+	{ ClkWinTitle,          0,        	    Button3,        focusstack,     {.i = -1 } },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },    // this is the status bar ram date cpu
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },   // the actual window
@@ -205,4 +208,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
