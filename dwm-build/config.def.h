@@ -34,14 +34,14 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
-const char *spcmd3[] = {"keepassxc", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm1", "-g", "120x34", NULL };
+const char *spcmd2[] = {"st", "-n", "spterm2", "-g", "120x34", NULL };
+const char *spcmd3[] = {"st", "-n", "spterm3", "-g", "120x34", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
-	{"spterm",      spcmd1},
-	{"spranger",    spcmd2},
-	{"keepassxc",   spcmd3},
+	{"spterm1",    spcmd1},
+	{"spterm2",    spcmd2},
+	{"spterm3",    spcmd3},
 };
 
 static const char *rofi_menu[]  = { "/home/safwan/.config/scripts/rofimenu", NULL };
