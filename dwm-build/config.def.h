@@ -58,9 +58,9 @@ static const Rule rules[] = {
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",	  NULL,			NULL,		0,				1,			 -1 },
 	{ "Firefox",  NULL,			NULL,		1 << 8,			0,			 -1 },
-	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
-	{ NULL,		  "spfm",		NULL,		SPTAG(1),		1,			 -1 },
-	{ NULL,		  "keepassxc",	NULL,		SPTAG(2),		0,			 -1 },
+	{ NULL,		  "spterm1",		NULL,		SPTAG(0),		1,			 -1 },
+	{ NULL,		  "spterm2",		NULL,		SPTAG(1),		1,			 -1 },
+	{ NULL,		  "spterm3",	NULL,		SPTAG(2),		0,			 -1 },
 };
 
 /* layout(s) */
