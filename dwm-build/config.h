@@ -34,14 +34,14 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {"st", "-n", "spfm", "-g", "144x41", "-e", "ranger", NULL };
-const char *spcmd3[] = {"keepassxc", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm1", "-g", "120x34", NULL };
+const char *spcmd2[] = {"st", "-n", "spterm2", "-g", "120x34", NULL };
+const char *spcmd3[] = {"st", "-n", "spterm3", "-g", "120x34", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
-	{"spterm",      spcmd1},
-	{"spranger",    spcmd2},
-	{"keepassxc",   spcmd3},
+	{"spterm1",     spcmd1},
+	{"spterm2",    	spcmd2},
+	{"spterm3",   	spcmd3},
 };
 
 static const char *rofi_menu[]  = { "/home/safwan/.config/scripts/rofimenu", NULL };
@@ -58,9 +58,9 @@ static const Rule rules[] = {
 	/* class            instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",	  NULL,			NULL,		0,				1,			 -1 },
 	{ "Firefox",  NULL,			NULL,		1 << 8,			0,			 -1 },
-	{ NULL,		  "spterm",		NULL,		SPTAG(0),		1,			 -1 },
-	{ NULL,		  "spfm",		NULL,		SPTAG(1),		1,			 -1 },
-	{ NULL,		  "keepassxc",	NULL,		SPTAG(2),		0,			 -1 },
+	{ NULL,		  "spterm1",		NULL,		SPTAG(0),		1,			 -1 },
+	{ NULL,		  "spterm2",		NULL,		SPTAG(1),		1,			 -1 },
+	{ NULL,		  "spterm3",		NULL,		SPTAG(2),		0,			 -1 },
 };
 
 /* layout(s) */
@@ -159,7 +159,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY,						XK_F9,		spawn,		   {.v = rofi_menu } },
+	{ 0,							XK_F9,		spawn,		   {.v = rofi_menu } },
+	{ Mod1Mask,						XK_Return,		spawn,	    SHCMD("terminator") },
+	{ MODKEY|ShiftMask,				XK_x,		    spawn,          SHCMD("betterlockscreen -l") },
 	{ ControlMask|Mod1Mask,				XK_t,		spawn,     {.v = thunar } },
 	{ ControlMask|Mod1Mask,				XK_b,		spawn,          SHCMD("brave") },
 	{ ControlMask|Mod1Mask,				XK_s,		spawn,          SHCMD("com.slack.Slack") },
