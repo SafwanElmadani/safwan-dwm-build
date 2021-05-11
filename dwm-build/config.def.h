@@ -160,6 +160,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ 0,							XK_F9,		spawn,		   {.v = rofi_menu } },
+	{ Mod1Mask,                     XK_Tab,     spawn,         SHCMD("/home/safwan/.config/scripts/rofiwindows") },
 	{ Mod1Mask,						XK_Return,		spawn,	    SHCMD("terminator") },
 	{ MODKEY|ShiftMask,				XK_x,		    spawn,          SHCMD("betterlockscreen -l") },
 	{ ControlMask|Mod1Mask,				XK_t,		spawn,     {.v = thunar } },
