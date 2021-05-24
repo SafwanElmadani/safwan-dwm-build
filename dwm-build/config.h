@@ -55,13 +55,17 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class            instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",	  NULL,			NULL,		0,				1,			 -1 },
-	{ "Firefox",  NULL,			NULL,		1 << 8,			0,			 -1 },
+	/* class            instance    title       tags mask     isfloating   monitor */ 
+	{ "Slack",	  	NULL,			NULL,		1 << 0, 		1,			  0 },
+	{ "zoom",  	NULL,			NULL,		1 << 7,			0,			  1 },
+	
+	{ "VirtualBox Manager",	  	NULL,			NULL,		1 << 7, 		0,			  1 },
+	{ "Brave-browser",  	NULL,			NULL,			1 << 0,			0,			  1 },
 	{ NULL,		  "spterm1",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "spterm2",		NULL,		SPTAG(1),		1,			 -1 },
 	{ NULL,		  "spterm3",		NULL,		SPTAG(2),		0,			 -1 },
 };
+// 0 for primary monitor and 1 for secondary -1 not specified follow focus/
 
 /* layout(s) */
 static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
