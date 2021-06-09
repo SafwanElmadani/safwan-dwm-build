@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 1;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corner, >0: systray on left of status text */
@@ -10,8 +10,8 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;     /* 0 means no systray */
 static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 20;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 30;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappoh    = 25;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 25;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
@@ -19,11 +19,11 @@ static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:antialias=
 										"fontawesome:size=12",
 										"JoyPixels:size=10:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=12";
-static const char col_gray1[]       = "#242424"; //"#222222"; //background color
+static const char col_gray1[]       = "#23272F"; //"#222222"; //background color
 static const char col_gray2[]       = "#444444"; //inactive window border color
 static const char col_gray3[]       = "#FFFFFF"; //"#bbbbbb"; // font color
-static const char col_gray4[]       = "#FFFFFF"; //"#eeeeee"; // current tag and current window font color
-static const char col_cyan[]        = "#994433"; //"#005577"; // top bar second color(blue) and active window color
+static const char col_gray4[]       = "#6b008f"; //"#eeeeee"; // current tag and current window font color
+static const char col_cyan[]        = "#88C0D0"; //"#005577"; // top bar second color(blue) and active window color
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
