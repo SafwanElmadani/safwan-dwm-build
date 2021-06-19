@@ -8,16 +8,16 @@ static const unsigned int systrayonleft = 0;   	/* 0: systray in the right corne
 static const unsigned int systrayspacing = 4;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
-static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 20;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 25;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 25;       /* vert outer gap between windows and screen edge */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 15;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 15;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:antialias=true:autohint=true",
 										"fontawesome:size=12",
-										"JoyPixels:size=10:antialias=true:autohint=true" };
+										"JoyPixels:size=11:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#23272F"; //"#222222"; //background color
 static const char col_gray2[]       = "#444444"; //inactive window border color
@@ -59,8 +59,8 @@ static const Rule rules[] = {
 	{ "Slack",	  	NULL,			NULL,		1 << 0, 		0,			  1 },
 	{ "zoom",  	NULL,			NULL,		1 << 7,			0,			  0 },
 	
-	{ "VirtualBox Manager",	  	NULL,			NULL,		1 << 7, 		0,			  0 },
-	{ "Brave-browser",  	NULL,			NULL,			1 << 0,			0,			  0 },
+	// { "VirtualBox Manager",	  	NULL,			NULL,		1 << 7, 		0,			  0 },
+	// { "Brave-browser",  	NULL,			NULL,			1 << 0,			0,			  0 },
 	{ NULL,		  "spterm1",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "spterm2",		NULL,		SPTAG(1),		1,			 -1 },
 	{ NULL,		  "spterm3",		NULL,		SPTAG(2),		0,			 -1 },
