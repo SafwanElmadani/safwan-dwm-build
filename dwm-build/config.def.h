@@ -57,7 +57,9 @@ static const Rule rules[] = {
 	 */
 	/* class            instance    title       tags mask     isfloating   monitor */ 
 	{ "Slack",	  	NULL,			NULL,		1 << 0, 		0,			  1 },
-	{ "zoom",  	NULL,			NULL,		1 << 7,			0,			  0 },
+	{ "zoom",  		NULL,			NULL,		1 << 7,			0,			  0 },
+	{ "flameshot",  NULL,			NULL,			 0,			1,			 -1},
+
 	
 	// { "VirtualBox Manager",	  	NULL,			NULL,		1 << 7, 		0,			  0 },
 	// { "Brave-browser",  	NULL,			NULL,			1 << 0,			0,			  0 },
@@ -178,6 +180,7 @@ static Key keys[] = {
 	{ ControlMask|Mod1Mask,				XK_o,		spawn,          SHCMD("obs") },
 	{ ControlMask|Mod1Mask,				XK_f,		spawn,          SHCMD("flameshot gui") },
 	{ ControlMask|Mod1Mask,				XK_v,		spawn,          SHCMD("virtualbox") },
+	{ ControlMask|Mod1Mask,				XK_p,		spawn,          SHCMD("dunstctl history-pop") },
 	{ 0,                            XF86XK_AudioLowerVolume,    spawn, SHCMD("~/.config/polybar/scripts/pavolume.sh --down") },
 	{ 0,                            XF86XK_AudioMute,           spawn, SHCMD("~/.config/polybar/scripts/pavolume.sh --togmute") },
 	{ 0,                            XF86XK_AudioRaiseVolume,    spawn, SHCMD("~/.config/polybar/scripts/pavolume.sh --up") },
