@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#update:
+dnf -y update
+#X-sever stuff:
+dnf -y install @base-x 
+#dnf -y install xorg-x11-server-Xorg xorg-x11-drv-{evdev,intel,synaptics} xorg-x11-xinit xterm terminus-fonts
+
+#Build tools:
+dnf -y install make automake gcc gcc-c++ kernel-devel
+
+#git:
+dnf -y install git
+
+#Install display manager:
+
+dnf install lightdm slick-greeter
+
+#the default is multi-user
+#use `systemctl set-default` to check
+systemctl set-default graphical.target
+
+#dwm required packages:
+
+dnf -y install libX11-devel libXft-devel libXinerama-devel
+
+
+#adding dwm to /user/share/xsesions
+
+cp ../xsessions/* /usr/share/xsessions
+
+echo "Update the greeter session in /etc/lightdm/lightdm.conf to match greeter session name in /usr/share/xgreeters"
+
+
+#install other pakcages
+
+dnf -y install nitrogen vim polkit bash-completion \
+    picom blueman terminator alacritty dunst 
