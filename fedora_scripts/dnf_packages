@@ -42,7 +42,8 @@ dnf -y install nitrogen vim polkit bash-completion \
     picom blueman terminator alacritty dunst dmenu \
     fontawesome-fonts arandr flameshot htop polkit-gnome \
     volumeicon pavucontrol rofi qt5ct numlockx udiskie \
-    wget curl rust cargo redhat-mono-fonts 
+    wget curl rust cargo redhat-mono-fonts lxappearance \
+    materia-gtk-theme Thunar papirus-icon-theme
 
 #$ sudo dnf install rust cargo
 
@@ -58,7 +59,7 @@ dnf -y install bluez blueman bluez-tools
 
 echo "cloning the dotfiles repo"
 
-cd ${USER_DIR} && git clone https://github.com/SafwanElmadani/dotfiles.git
+cd ${USER_DIR} && git clone -b fedora https://github.com/SafwanElmadani/dotfiles.git
 
 
 cd ${USER_DIR}/dotfiles && \
@@ -68,3 +69,9 @@ cp .xprofile ~/ && \
 cp -R .config/* ${USER_DIR}/.config && \
 
 chmod -R +x ${USER_DIR}/.config/scripts
+
+#Install pfetch
+
+
+cd ${USER_DIR} && git clone https://github.com/dylanaraps/pfetch.git && \
+install pfetch/pfetch /usr/local/bin/
