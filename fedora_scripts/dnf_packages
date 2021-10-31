@@ -1,5 +1,9 @@
 #!/bin/bash
 
+USER_DIR="/home/safwan"
+
+cd ${USER_DIR}
+
 #update:
 dnf -y update
 #X-sever stuff:
@@ -35,4 +39,29 @@ echo "Update the greeter session in /etc/lightdm/lightdm.conf to match greeter s
 #install other pakcages
 
 dnf -y install nitrogen vim polkit bash-completion \
-    picom blueman terminator alacritty dunst 
+    picom blueman terminator alacritty dunst dmenu \
+    fontawesome-fonts arandr flameshot htop polkit-gnome \
+    volumeicon pavucontrol rofi qt5ct numlockx udiskie
+
+# needed by terminator
+dnf -y install gsettings-desktop-schemas
+
+#audio server
+dnf -y install pipewire
+dnf -y install --allowerasing pipewire-pulseaudio
+
+#bluetooth
+dnf -y install bluez blueman bluez-tools
+
+echo "cloning the dotfiles repo"
+
+cd ${USER_DIR} && git clone https://github.com/SafwanElmadani/dotfiles.git
+
+
+cd ${USER_DIR}/dotfiles && \
+
+cp .xprofile ~/ && \
+
+cp -R .config/* ${USER_DIR}/.config && \
+
+chmod -R +x ${USER_DIR}/.config/scripts
