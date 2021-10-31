@@ -41,7 +41,8 @@ echo "Update the greeter session in /etc/lightdm/lightdm.conf to match greeter s
 dnf -y install nitrogen vim polkit bash-completion \
     picom blueman terminator alacritty dunst dmenu \
     fontawesome-fonts arandr flameshot htop polkit-gnome \
-    volumeicon pavucontrol rofi qt5ct numlockx udiskie
+    volumeicon pavucontrol rofi qt5ct numlockx udiskie \
+    wget curl
 
 # needed by terminator
 dnf -y install gsettings-desktop-schemas
