@@ -18,7 +18,7 @@ dnf -y install git
 
 #Install display manager:
 
-dnf install lightdm slick-greeter
+dnf install lightdm slick-greeter lightdm-gtk
 
 #the default is multi-user
 #use `systemctl set-default` to check
