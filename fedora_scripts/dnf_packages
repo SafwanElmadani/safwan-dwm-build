@@ -64,7 +64,7 @@ cd ${USER_DIR} && git clone -b fedora https://github.com/SafwanElmadani/dotfiles
 
 cd ${USER_DIR}/dotfiles && \
 
-cp .xprofile ~/ && \
+cp .xprofile ${USER_DIR}/ && \
 
 cp -R .config/* ${USER_DIR}/.config && \
 
