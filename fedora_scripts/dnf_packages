@@ -42,7 +42,9 @@ dnf -y install nitrogen vim polkit bash-completion \
     picom blueman terminator alacritty dunst dmenu \
     fontawesome-fonts arandr flameshot htop polkit-gnome \
     volumeicon pavucontrol rofi qt5ct numlockx udiskie \
-    wget curl
+    wget curl rust cargo redhat-mono-fonts 
+
+#$ sudo dnf install rust cargo
 
 # needed by terminator
 dnf -y install gsettings-desktop-schemas
