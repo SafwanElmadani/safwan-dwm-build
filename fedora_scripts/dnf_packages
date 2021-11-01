@@ -43,7 +43,8 @@ dnf -y install nitrogen vim polkit bash-completion \
     fontawesome-fonts arandr flameshot htop polkit-gnome \
     volumeicon pavucontrol rofi qt5ct numlockx udiskie \
     wget curl rust cargo redhat-mono-fonts lxappearance \
-    materia-gtk-theme Thunar papirus-icon-theme
+    materia-gtk-theme Thunar papirus-icon-theme network-manager-applet \
+
 
 #$ sudo dnf install rust cargo
 
@@ -65,6 +66,10 @@ cd ${USER_DIR} && git clone -b fedora https://github.com/SafwanElmadani/dotfiles
 cd ${USER_DIR}/dotfiles && \
 
 cp .xprofile ${USER_DIR}/ && \
+
+mv ${USER_DIR}/.xprofile ${USER_DIR}/dwm-start && \
+
+chmod +x ${USER_DIR}/dwm-start && \
 
 cp -R .config/* ${USER_DIR}/.config && \
 
