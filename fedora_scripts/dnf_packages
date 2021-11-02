@@ -18,7 +18,7 @@ dnf -y install git
 
 #Install display manager:
 
-dnf install lightdm slick-greeter lightdm-gtk
+dnf install lightdm lightdm-gtk
 
 #the default is multi-user
 #use `systemctl set-default` to check
@@ -83,13 +83,6 @@ chmod +x ${USER_DIR}/dwm-start && \
 cp -R .config/* ${USER_DIR}/.config && \
 
 chmod -R +x ${USER_DIR}/.config/scripts
-
-#Install pfetch
-
-
-cd ${USER_DIR} && git clone https://github.com/dylanaraps/pfetch.git && \
-install pfetch/pfetch /usr/local/bin/
-
 
 
 echo "Update the greeter session in /etc/lightdm/lightdm.conf to match greeter session name in /usr/share/xgreeters"

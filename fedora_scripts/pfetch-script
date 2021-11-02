@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#Install pfetch
+
+
+cd ${USER_DIR} && git clone https://github.com/dylanaraps/pfetch.git && \
+install pfetch/pfetch /usr/local/bin/
+

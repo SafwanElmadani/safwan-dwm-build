@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "fastestmirror=True
+max_parallel_downloads=10
+defaultyes=True" >> /etc/dnf/dnf.conf
