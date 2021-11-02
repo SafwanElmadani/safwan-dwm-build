@@ -54,6 +54,7 @@ dnf -y install gsettings-desktop-schemas
 #audio server
 dnf -y install pipewire
 dnf -y install --allowerasing pipewire-pulseaudio
+dnf -y install alsa-utils
 
 #bluetooth
 dnf -y install bluez blueman bluez-tools
