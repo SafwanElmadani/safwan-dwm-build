@@ -33,7 +33,7 @@ dnf -y install libX11-devel libXft-devel libXinerama-devel
 
 cp ../xsessions/* /usr/share/xsessions
 
-echo "Update the greeter session in /etc/lightdm/lightdm.conf to match greeter session name in /usr/share/xgreeters"
+
 
 
 #install other pakcages
@@ -52,9 +52,17 @@ dnf -y install nitrogen vim polkit bash-completion \
 dnf -y install gsettings-desktop-schemas
 
 #audio server
-dnf -y install pipewire
+dnf -y install pipewire pipewire-utils
 dnf -y install --allowerasing pipewire-pulseaudio
-dnf -y install alsa-utils
+dnf -y install alsa-utils 
+
+
+#compression tools
+
+dnf -y install zip unzip tar util-linux-user bzip2
+
+
+dnf -y install NetworkManager-bluetooth NetworkManager-wifi NetworkManager-wwan
 
 #bluetooth
 dnf -y install bluez blueman bluez-tools
@@ -81,3 +89,7 @@ chmod -R +x ${USER_DIR}/.config/scripts
 
 cd ${USER_DIR} && git clone https://github.com/dylanaraps/pfetch.git && \
 install pfetch/pfetch /usr/local/bin/
+
+
+
+echo "Update the greeter session in /etc/lightdm/lightdm.conf to match greeter session name in /usr/share/xgreeters"
