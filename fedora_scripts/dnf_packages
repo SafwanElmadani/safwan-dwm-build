@@ -7,7 +7,7 @@ cd ${USER_DIR}
 #update:
 dnf -y update
 #X-sever stuff:
-dnf -y install @base-x 
+dnf -y install @base-x #there is a package didnt match!!
 #dnf -y install xorg-x11-server-Xorg xorg-x11-drv-{evdev,intel,synaptics} xorg-x11-xinit xterm terminus-fonts
 
 #Build tools:
@@ -31,7 +31,7 @@ dnf -y install libX11-devel libXft-devel libXinerama-devel
 
 #adding dwm to /user/share/xsesions
 
-cp ../xsessions/* /usr/share/xsessions
+# cp ../xsessions/* /usr/share/xsessions # didnt work. Done manually
 
 
 
@@ -86,3 +86,7 @@ chmod -R +x ${USER_DIR}/.config/scripts
 
 
 echo "Update the greeter session in /etc/lightdm/lightdm.conf to match greeter session name in /usr/share/xgreeters"
+echo "cp safwan-dwm-buld/xsessions/* /usr/share/xsessions"
+
+
+#Add change own later chown

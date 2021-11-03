@@ -62,7 +62,7 @@ static const Rule rules[] = {
 
 	
 	// { "VirtualBox Manager",	  	NULL,			NULL,		1 << 7, 		0,			  0 },
-	// { "Brave-browser",  	NULL,			NULL,			1 << 0,			0,			  0 },
+	// { "brave-browser",  	NULL,			NULL,			1 << 0,			0,			  0 },
 	{ NULL,		  "spterm1",		NULL,		SPTAG(0),		1,			 -1 },
 	{ NULL,		  "spterm2",		NULL,		SPTAG(1),		1,			 -1 },
 	{ NULL,		  "spterm3",		NULL,		SPTAG(2),		0,			 -1 },
@@ -171,10 +171,10 @@ static Key keys[] = {
 	{ Mod1Mask,						XK_Return,		spawn,	    SHCMD("terminator") },
 	{ MODKEY|ShiftMask,				XK_x,		    spawn,          SHCMD("betterlockscreen -l") },
 	{ ControlMask|Mod1Mask,				XK_t,		spawn,     {.v = thunar } },
-	{ ControlMask|Mod1Mask,				XK_b,		spawn,          SHCMD("brave") },
-	{ ControlMask|Mod1Mask,				XK_s,		spawn,          SHCMD("com.slack.Slack") },
-	{ ControlMask|Mod1Mask,				XK_z,		spawn,          SHCMD("us.zoom.Zoom") },
-	{ ControlMask|Mod1Mask,				XK_c,		spawn,          SHCMD("com.giuspen.cherrytree") },
+	{ ControlMask|Mod1Mask,				XK_b,		spawn,          SHCMD("brave-browser") },
+	{ ControlMask|Mod1Mask,				XK_s,		spawn,          SHCMD("flatpak run com.slack.Slack") },
+	{ ControlMask|Mod1Mask,				XK_z,		spawn,          SHCMD("flatpak run us.zoom.Zoom") },
+	{ ControlMask|Mod1Mask,				XK_c,		spawn,          SHCMD("flatpak run com.giuspen.cherrytree") },
 	{ ControlMask|Mod1Mask,				XK_m,		spawn,          SHCMD("mailspring") },
 	{ ControlMask|Mod1Mask,				XK_g,		spawn,          SHCMD("google-chrome-stable") },
 	{ ControlMask|Mod1Mask,				XK_o,		spawn,          SHCMD("obs") },

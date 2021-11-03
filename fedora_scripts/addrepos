@@ -11,4 +11,4 @@ dnf -y install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh2
 
 dnf -y install lame\* --exclude=lame-devel
 
-dnf -y group upgrade --with-optional Multimedia
+# dnf -y group upgrade --with-optional Multimedia # didnt work 
