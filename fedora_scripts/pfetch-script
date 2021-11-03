@@ -6,3 +6,22 @@
 cd ${USER_DIR} && git clone https://github.com/dylanaraps/pfetch.git && \
 install pfetch/pfetch /usr/local/bin/
 
+
+#fonts and emoji
+
+dnf -y install google-noto-fonts-common
+dnf -y install levien-inconsolata-fonts
+dnf -y install gdouros-symbola-fonts
+
+
+needed packages:
+xorg-x11-util-macros
+patch 
+
+
+
+
+
+
+
+#twitter-twemoji-fonts// crashes dwm
