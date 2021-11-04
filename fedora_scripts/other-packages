@@ -24,7 +24,10 @@ patch
 #for brightness
 dnf install xbacklight
 
+#bebugger
+dnf install gdb
 
+dnf install xinput
 
 
 #twitter-twemoji-fonts// crashes dwm
