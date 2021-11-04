@@ -16,18 +16,30 @@ dnf -y install google-noto-fonts-common
 dnf -y install levien-inconsolata-fonts
 dnf -y install gdouros-symbola-fonts
 
+#install JoyPixels
+wget https://cdn.joypixels.com/arch-linux/font/6.6.0/joypixels-android.ttf
+cp joypixels-android.ttf JoyPixels.ttf
+mkdir -p /home/safwan/.local/share/fonts/JoyPixels/
+mv JoyPixels.ttf /home/safwan/.local/share/fonts/JoyPixels/
 
-needed packages:
-xorg-x11-util-macros
-patch 
+# then do: fc-cache -f -v 
+# and fc-list | grep "Joy" to check if the system detect it.
 
+
+#needed packages:
+dnf -y install xorg-x11-util-macros patch
+ 
 #for brightness
 dnf install xbacklight
 
 #bebugger
 dnf install gdb
 
+#input
 dnf install xinput
+
+#patch libXft:
+# https://github.com/SafwanElmadani/libxft-bgra
 
 
 #twitter-twemoji-fonts// crashes dwm
