@@ -55,6 +55,7 @@ dnf -y install gsettings-desktop-schemas
 dnf -y install pipewire pipewire-utils
 dnf -y install --allowerasing pipewire-pulseaudio
 dnf -y install alsa-utils 
+dnf -y install pulseaudio-utils
 
 
 #compression tools
