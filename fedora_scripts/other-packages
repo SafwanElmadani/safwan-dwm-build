@@ -20,6 +20,7 @@ dnf -y install gdouros-symbola-fonts
 # NEED TO INSTALL libXft-bgra first or dwm will crash
 #install twitter emoji
 dnf -y install twitter-twemoji-fonts
+dnf -y install google-noto-emoji-color-fonts 
 
 #install JoyPixels
 wget https://cdn.joypixels.com/arch-linux/font/6.6.0/joypixels-android.ttf
