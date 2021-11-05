@@ -51,5 +51,8 @@ dnf install gdb
 #input
 dnf install xinput
 
+#with zsh solves: _dnf_query_db:1: command not found: sqlite3
+dnf install sqlite
+
 #patch libXft:
 # https://github.com/SafwanElmadani/libxft-bgra
