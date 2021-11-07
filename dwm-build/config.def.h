@@ -15,10 +15,9 @@ static const unsigned int gappov    = 15;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:antialias=true:autohint=true",
-										"fontawesome:size=12",
+static const char *fonts[]          = { "mononoki:size=12:antialias=true:autohint=true",
 										"Twemoji:size=11:antialias=true:autohint=true" };
-static const char dmenufont[]       = "monospace:size=12";
+static const char dmenufont[]       = "mononoki:size=12";
 static const char col_gray1[]       = "#23272F"; //"#222222"; //background color
 static const char col_gray2[]       = "#444444"; //inactive window border color
 static const char col_gray3[]       = "#FFFFFF"; //"#bbbbbb"; // font color
@@ -181,6 +180,7 @@ static Key keys[] = {
 	{ ControlMask|Mod1Mask,				XK_f,		spawn,          SHCMD("flameshot gui") },
 	{ ControlMask|Mod1Mask,				XK_v,		spawn,          SHCMD("virtualbox") },
 	{ ControlMask|Mod1Mask,				XK_p,		spawn,          SHCMD("dunstctl history-pop") },
+	{ ControlMask|Mod1Mask,				XK_e,		spawn,          SHCMD("rofimoji") },
 	{ 0,                            XF86XK_AudioLowerVolume,    spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%") },
 	{ 0,                            XF86XK_AudioMute,           spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ toggle") },
 	{ 0,                            XF86XK_AudioRaiseVolume,    spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%") },

@@ -11,6 +11,10 @@ install pfetch/pfetch /usr/local/bin/
 
 
 #fonts and emoji
+#for dwm fonts install mononaki or Hack and change in the name in the config
+#https://github.com/source-foundry/Hack
+#https://github.com/madmalik/mononoki/blob/master/export/mononoki-Regular.ttf
+#dont use the nerd font version because they add some icon for theier fonts.
 
 dnf -y install google-noto-fonts-common
 dnf -y install levien-inconsolata-fonts
@@ -56,3 +60,6 @@ dnf install sqlite
 
 #patch libXft:
 # https://github.com/SafwanElmadani/libxft-bgra
+
+#install emoji picker 
+#sudo dnf install rofimoji
