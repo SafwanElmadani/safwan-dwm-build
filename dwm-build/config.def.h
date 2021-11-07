@@ -17,7 +17,7 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "UbuntuMono Nerd Font:size=12:antialias=true:autohint=true",
 										"fontawesome:size=12",
-										"JoyPixels:size=11:antialias=true:autohint=true" };
+										"JoyPixels:size=12:antialias=true:autohint=true" };
 static const char dmenufont[]       = "monospace:size=12";
 static const char col_gray1[]       = "#23272F"; //"#222222"; //background color
 static const char col_gray2[]       = "#444444"; //inactive window border color
