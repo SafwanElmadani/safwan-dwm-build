@@ -1,0 +1,93 @@
+#!/bin/bash
+
+USER_DIR="/home/safwan"
+
+cd ${USER_DIR}
+
+#update:
+apt update -y && apt upgrade -y
+#X-sever stuff:
+
+#dwm required packages:
+# dnf -y install libX11-devel libXft-devel libXinerama-devel
+apt install libx11-dev libxft-dev libxinerama-dev xorg
+
+#Build tools:
+# dnf -y install make automake gcc gcc-c++ kernel-devel
+apt install build-essential 
+
+
+
+#git:
+apt -y install git
+
+#Install display manager:
+
+# dnf install lightdm lightdm-gtk
+
+#the default is multi-user
+#use `systemctl get-default` to check
+systemctl set-default graphical.target
+
+
+
+
+#adding dwm to /user/share/xsesions
+
+# cp ../xsessions/* /usr/share/xsessions # didnt work. Done manually
+
+
+
+
+#install other pakcages
+# alacritty dmenu fontawesome-fonts polkit-gnome rust cargo 
+apt -y install nitrogen vim bash-completion policykit-1-gnome \
+    picom blueman terminator dunst  \
+     arandr flameshot htop \
+    volumeicon-alsa pavucontrol rofi qt5ct numlockx udiskie \
+    wget curl fonts-hack-ttf lxappearance \
+    materia-gtk-theme Thunar papirus-icon-theme network-manager-gnome  \
+
+
+#$ sudo dnf install rust cargo
+
+#audio server
+apt -y install pipewire pipewire-audio-client-libraries
+# dnf -y install --allowerasing pipewire-pulseaudio
+# dnf -y install alsa-utils 
+# dnf -y install pulseaudio-utils
+
+
+#compression tools
+
+apt -y install zip unzip tar util-linux bzip2
+
+
+# dnf -y install NetworkManager-bluetooth NetworkManager-wifi NetworkManager-wwan
+
+#bluetooth
+# dnf -y install bluez blueman bluez-tools
+
+echo "cloning the dotfiles repo"
+
+cd ${USER_DIR} && git clone -b fedora https://github.com/SafwanElmadani/dotfiles.git
+
+
+cd ${USER_DIR}/dotfiles && \
+
+cp .xprofile ${USER_DIR}/ && \
+
+mv ${USER_DIR}/.xprofile ${USER_DIR}/dwm-start && \
+
+chmod +x ${USER_DIR}/dwm-start && \
+
+cp -R .config/* ${USER_DIR}/.config && \
+
+chmod -R +x ${USER_DIR}/.config/scripts
+
+
+echo "Update the greeter session in /etc/lightdm/lightdm.conf to match greeter session name in /usr/share/xgreeters"
+echo "cp safwan-dwm-buld/xsessions/* /usr/share/xsessions"
+
+
+#Add change own later chown
