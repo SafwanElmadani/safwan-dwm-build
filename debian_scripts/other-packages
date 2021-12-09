@@ -12,13 +12,16 @@ install pfetch/pfetch /usr/local/bin/
 
 #fonts and emoji
 #for dwm fonts install mononaki or Hack and change in the name in the config
+apt install fonts-mononoki
 #https://github.com/source-foundry/Hack
 #https://github.com/madmalik/mononoki/blob/master/export/mononoki-Regular.ttf
 #dont use the nerd font version because they add some icon for theier fonts.
 
-dnf -y install google-noto-fonts-common
-dnf -y install levien-inconsolata-fonts
-dnf -y install gdouros-symbola-fonts
+# dnf -y install google-noto-fonts-common
+# dnf -y install levien-inconsolata-fonts
+apt install -y fonts-inconsolata
+# dnf -y install gdouros-symbola-fonts
+apt install -y fonts-symbola 
 
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 # NEED TO INSTALL libXft-bgra first or dwm will crash

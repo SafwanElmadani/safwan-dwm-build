@@ -47,6 +47,7 @@ apt -y install nitrogen vim bash-completion policykit-1-gnome \
     volumeicon-alsa pavucontrol rofi qt5ct numlockx udiskie \
     wget curl fonts-hack-ttf lxappearance \
     materia-gtk-theme Thunar papirus-icon-theme network-manager-gnome  \
+    fonts-font-awesome \
 
 
 #$ sudo dnf install rust cargo
