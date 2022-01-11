@@ -176,7 +176,7 @@ static Key keys[] = {
 	{ ControlMask|Mod1Mask,				XK_c,		spawn,          SHCMD("flatpak run com.giuspen.cherrytree") },
 	{ ControlMask|Mod1Mask,				XK_m,		spawn,          SHCMD("mailspring") },
 	{ ControlMask|Mod1Mask,				XK_g,		spawn,          SHCMD("google-chrome-stable") },
-	{ ControlMask|Mod1Mask,				XK_o,		spawn,          SHCMD("obs") },
+	{ ControlMask|Mod1Mask,				XK_o,		spawn,          SHCMD("flatpak run com.obsproject.Studio") },
 	{ ControlMask|Mod1Mask,				XK_f,		spawn,          SHCMD("flameshot gui") },
 	{ ControlMask|Mod1Mask,				XK_v,		spawn,          SHCMD("virtualbox") },
 	{ ControlMask|Mod1Mask,				XK_p,		spawn,          SHCMD("dunstctl history-pop") },
