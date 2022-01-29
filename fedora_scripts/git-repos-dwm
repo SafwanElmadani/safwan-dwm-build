@@ -1,0 +1,8 @@
+#!/bin/bash
+
+git clone -b fedora https://github.com/SafwanElmadani/dotfiles.git && \
+
+#install fonts in ~/.local/share
+git clone https://github.com/SafwanElmadani/fonts.git && \
+
+git clone https://github.com/SafwanElmadani/libxft-bgra 
