@@ -47,7 +47,7 @@ static const char *rofi_menu[]  = { "/home/safwan/.config/scripts/rofimenu", NUL
 static const char *thunar[]  = {"thunar", NULL };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -55,8 +55,8 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class            instance    title       tags mask     isfloating   monitor */ 
-	{ "Slack",	  	NULL,			NULL,		1 << 8, 		0,			  1 },
-	{ "zoom",  		NULL,			NULL,		1 << 7,			0,			  1 },
+	{ "Slack",	  	NULL,			NULL,		1 << 8, 		0,			  0 },
+	{ "zoom",  		NULL,			NULL,		1 << 7,			0,			  0 },
 	{ "flameshot",  NULL,			NULL,			 0,			1,			 -1},
 
 	
@@ -198,6 +198,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_F1,                      9)
+	TAGKEYS(                        XK_F2,                      10)
+	TAGKEYS(                        XK_F3,                      11)
 	{ MODKEY|ShiftMask,             XK_c,      quit,           {0} },
 };
 
