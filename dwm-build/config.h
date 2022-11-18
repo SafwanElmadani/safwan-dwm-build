@@ -167,7 +167,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ 0,							XK_F9,		spawn,		   {.v = rofi_menu } },
 	{ Mod1Mask,                     XK_Tab,     spawn,         SHCMD("/home/safwan/.config/scripts/rofiwindows") },
-	{ Mod1Mask,						XK_Return,		spawn,	    SHCMD("terminator") },
+	{ Mod1Mask,						XK_Return,		spawn,	    SHCMD("kitty") },
 	{ MODKEY|ShiftMask,				XK_x,		    spawn,          SHCMD("betterlockscreen -l") },
 	{ ControlMask|Mod1Mask,				XK_t,		spawn,     {.v = thunar } },
 	{ ControlMask|Mod1Mask,				XK_b,		spawn,          SHCMD("brave-browser") },
