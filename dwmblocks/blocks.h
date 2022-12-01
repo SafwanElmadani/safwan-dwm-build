@@ -19,7 +19,7 @@ static const Block blocks[] = {
 
     {"",     "/home/safwan/.config/scripts/batt",                   10,                 0},
 
-    {"", "/home/safwan/.config/scripts/dtscripts/clock",            0,                  0},
+    {"", "/home/safwan/.config/scripts/dtscripts/clock",            5,                  0},
 
 
 };
