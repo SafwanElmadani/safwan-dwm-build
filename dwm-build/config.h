@@ -182,6 +182,8 @@ static Key keys[] = {
 	{ ControlMask|Mod1Mask,				XK_v,		spawn,          SHCMD("virtualbox") },
 	{ ControlMask|Mod1Mask,				XK_p,		spawn,          SHCMD("dunstctl history-pop") },
 	{ ControlMask|Mod1Mask,				XK_e,		spawn,          SHCMD("rofimoji") },
+	{ ControlMask,					    XK_F11,		spawn,		    SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%")},
+	{ ControlMask,					    XK_F12,		spawn,		    SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%")},
 	{ 0,                            XF86XK_AudioLowerVolume,    spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ -10%") },
 	{ 0,                            XF86XK_AudioMute,           spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ toggle") },
 	{ 0,                            XF86XK_AudioRaiseVolume,    spawn, SHCMD("pactl set-sink-volume @DEFAULT_SINK@ +10%") },
