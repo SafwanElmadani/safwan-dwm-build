@@ -1,0 +1,32 @@
+#!/bin/bash
+
+CAPA=$(cat /sys/class/power_supply/BAT0/capacity)
+STATUS=$(cat /sys/class/power_supply/BAT0/status)
+ICON1="🔋"
+ICON2="🔌"
+ICON3="💡"
+#ICON3="⚡"
+
+if [ "$STATUS" = "Charging" ]; then
+
+	echo "[$ICON2$CAPA%]"
+	
+elif [ "$STATUS" = "Discharging" ]; then
+	
+	echo "[$ICON1$CAPA%]"
+	
+elif [ "$STATUS" = "Full" ]; then
+	
+	echo "[$ICON3$CAPA%]"
+
+elif [ "$STATUS" = "Not charging" ]; then
+
+	echo "[$ICON3$CAPA%]"
+	
+else 
+
+echo "[♻️ ]" 
+	
+fi
+
+

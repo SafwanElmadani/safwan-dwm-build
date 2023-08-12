@@ -17,7 +17,7 @@ static const Block blocks[] = {
 
     {"",     "/home/safwan/.config/scripts/dwmcpu",                 2,                  0},
 
-    {"",     "/home/safwan/.config/scripts/batt",                   10,                 0},
+    //{"",     "/home/safwan/.config/scripts/batt",                   10,                 0},
 
     {"", "/home/safwan/.config/scripts/dtscripts/clock",            5,                  0},
 
